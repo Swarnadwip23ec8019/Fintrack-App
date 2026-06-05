@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside>
+
+        <h1>FinTrack</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <button class="nav-btn active" data-section="dashboard-section">
+                        Dashboard
+                    </button>
+                </li>
+
+                <li>
+                    <button class="nav-btn" data-section="transactions-section">
+                        Transactions
+                    </button>
+                </li>
+
+                <li>
+                    <button class="nav-btn" data-section="analytics-section">
+                        Analytics
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+    <main>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard-section" class="page-section active-section">
+
+            <h2>Dashboard</h2>
+
+            <div class="widget-container">
+
+                <div class="card">
+                    <h3>Total Balance</h3>
+                    <p id="balance">$0.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Income</h3>
+                    <p id="income">$0.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p id="expense">$0.00</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TRANSACTIONS -->
+        <section id="transactions-section" class="page-section">
+
+            <h2>Transactions</h2>
+
+            <div class="form-container">
+
+                <form id="transaction-form">
+
+                    <div>
+                        <label>Description</label>
+
+                        <input
+                            type="text"
+                            id="description"
+                            placeholder="e.g. Salary"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Amount</label>
+
+                        <input
+                            type="number"
+                            id="amount"
+                            placeholder="0.00"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Type</label>
+
+                        <select id="type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">
+                        Add Transaction
+                    </button>
+
+                </form>
+
+            </div>
+
+            <h3>Transaction History</h3>
+
+            <ul id="transaction-list"></ul>
+
+        </section>
+
+        <!-- ANALYTICS -->
+        <section id="analytics-section" class="page-section">
+
+            <h2>Analytics</h2>
+
+            <div class="analytics-card">
+
+                <p>
+                    Analytics section coming soon 🚀
+                </p>
+
+                <p>
+                    Later you can add:
+                </p>
+
+                <ul>
+                    <li>Pie Charts</li>
+                    <li>Expense Categories</li>
+                    <li>Monthly Reports</li>
+                    <li>Income vs Expense Graphs</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
